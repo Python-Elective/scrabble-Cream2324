@@ -87,7 +87,7 @@ def get_word_score(word, n):
     return total_score
  
 #testcases for logic
-print(get_word_score("waybill", 7)) #155
+print(get_word_score("inertia", 7)) #155
  
 #testcases for assertion
 #Legal
