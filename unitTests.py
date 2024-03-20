@@ -1,4 +1,4 @@
-from Scrabble import *
+from Cream_1101_Scrabble  import *
 
 #
 # Test code
