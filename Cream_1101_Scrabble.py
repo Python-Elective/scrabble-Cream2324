@@ -295,6 +295,7 @@ def play_hand(hand, word_list, n):
 # Problem #5: Playing a game
 #
  
+
 def play_game(word_list, n):
     """
     Allow the user to play an arbitrary number of hands.
