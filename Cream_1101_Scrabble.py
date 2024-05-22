@@ -295,26 +295,48 @@ def play_hand(hand, word_list, n):
 # Problem #5: Playing a game
 #
  
-def play_game(word_list):
+def play_game(word_list, n):
     """
     Allow the user to play an arbitrary number of hands.
- 
+
     1) Asks the user to input 'n' or 'r' or 'e'.
       * If the user inputs 'n', let the user play a new (random) hand.
       * If the user inputs 'r', let the user play the last hand again.
       * If the user inputs 'e', exit the game.
       * If the user inputs anything else, tell them their input was invalid.
- 
+
     2) When done playing the hand, repeat from step 1    
     """
     # TO DO ... <-- Remove this comment when you code this function
-    # <-- Remove this line when you code the function
-    print("play_game not yet implemented.")
- 
- 
+
+    assert isinstance(n, int), "Hand size must be an integer"
+    assert n >= 0, "Hand size mustnt be negative"
+    assert isinstance(word_list, list), "Word list must be a list"
+
+    total_score = 0
+
+    while True:
+        user_input = input("Enter 'n' to deal a new hand, 'r' to replay the last hand, or 'e' to end game: ")
+
+        if user_input == 'n':
+            hand = deal_hand(HAND_SIZE)
+            total_score += play_hand(hand, word_list, n)
+        elif user_input == 'r':
+            if total_score == 0:
+                print("You have not played a hand yet. Play a new hand first!")
+                continue
+            else:
+                total_score += play_hand(hand, word_list, n)
+        elif user_input == 'e':
+            print("Total score:", total_score)
+            break
+        else:
+            print("Invalid input. Try again!")
+
 #
 # Build data structures used for entire session and play game
 #
 if __name__ == '__main__':
     word_list = load_words()
-    play_game(word_list)
+    HAND_SIZE = 7
+    play_game(word_list, HAND_SIZE)
