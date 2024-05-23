@@ -341,3 +341,4 @@ if __name__ == '__main__':
     word_list = load_words()
     HAND_SIZE = 7
     play_game(word_list, HAND_SIZE)
+
