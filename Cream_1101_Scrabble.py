@@ -87,7 +87,7 @@ def get_word_score(word, n):
     return total_score
  
 #testcases for logic
-print(get_word_score("inertia", 7)) #99
+# print(get_word_score("inertia", 7)) #99
  
 #testcases for assertion
 #Legal
@@ -116,7 +116,7 @@ def display_hand(hand):
         for _ in range(hand[letter]):
             print(letter, end=" ")       # print all on the same line
     print()                             # print an empty line
-display_hand({'a':1, 'x':2, 'l':3, 'e':1})
+# display_hand({'a':1, 'x':2, 'l':3, 'e':1})
 #
 # Problem #2: Make sure you understand how this function works and what it does!
 #
@@ -147,7 +147,7 @@ def deal_hand(n):
  
     return hand
  
-print(deal_hand(HAND_SIZE))
+# print(deal_hand(HAND_SIZE))
  
 #
 # Problem #2: Update a hand by removing letters
@@ -185,8 +185,8 @@ def update_hand(hand: dict, word: str) -> dict:
     return output
  
 #testcase
-print(update_hand({'a': 1, 'q':1, 'l':2, 'm':1, 'u':1, 'i':1}, "quail"))
-print(update_hand({'a': 0, 'q':0, 'l':1, 'm':1, 'u':0, 'i':0}, "quail"))
+# print(update_hand({'a': 1, 'q':1, 'l':2, 'm':1, 'u':1, 'i':1}, "quail"))
+# print(update_hand({'a': 0, 'q':0, 'l':1, 'm':1, 'u':0, 'i':0}, "quail"))
  
 #
 # Problem #3: Test word validity
@@ -224,8 +224,8 @@ def is_valid_word(word: str, hand: dict, word_list: list) -> bool:
     return True
  
 #testcases
-print(is_valid_word("hello", {'h': 1, 'e':1, 'l':2, 'o':1, 'u':1, 'i':1}, ["hello", "cream"]))
-print(is_valid_word("hello", {'h': 1, 'e':1, 'l':1, 'o':2, 'u':1, 'i':1}, ["hello", "cream"]))
+# print(is_valid_word("hello", {'h': 1, 'e':1, 'l':2, 'o':1, 'u':1, 'i':1}, ["hello", "cream"]))
+# print(is_valid_word("hello", {'h': 1, 'e':1, 'l':1, 'o':2, 'u':1, 'i':1}, ["hello", "cream"]))
  
 #
 # Problem #4: Playing a hand
